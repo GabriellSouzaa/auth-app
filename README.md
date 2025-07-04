@@ -21,7 +21,7 @@ Frontend em React 18+ com gerenciamento de estado via React Context, rotas prote
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/auth-frontend.git
+git clone https://github.com/GabriellSouzaa/auth-app.git
 cd auth-frontend
 
 # 2. Instale as dependências
