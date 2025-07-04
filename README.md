@@ -1,70 +1,97 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ⚛️ Auth Frontend – Aplicação React de Autenticação
 
-## Available Scripts
+Frontend em React 18+ com gerenciamento de estado via React Context, rotas protegidas e comunicação com backend via API REST.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📦 Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18+
+- TypeScript
+- React Router DOM
+- React Context API (para autenticação)
+- Axios (consumo da API)
+- Tailwind CSS (estilização)
+- ESLint + Prettier
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Como rodar o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/auth-frontend.git
+cd auth-frontend
 
-### `npm run build`
+# 2. Instale as dependências
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 3. Inicie o servidor de desenvolvimento
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Estrutura de Pastas
 
-### `npm run eject`
+```
+src/
+├── api/                # Serviço Axios para autenticação
+├── context/            # React Context para estado global de auth
+├── components/         # Componentes reutilizáveis (ex: PrivateRoute)
+├── pages/              # Páginas: Login, Register, Dashboard
+├── App.tsx             # Configuração de rotas
+├── index.tsx           # Ponto de entrada React
+├── index.css           # Estilos globais (Tailwind)
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📌 Funcionalidades
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Tela      | Descrição                                      |
+|-----------|------------------------------------------------|
+| Register  | Cadastro de usuário com validação e feedback  |
+| Login     | Autenticação com e-mail e senha, recebe JWT   |
+| Dashboard | Página protegida que exibe perfil do usuário  |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔐 Autenticação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- O token JWT é armazenado em `localStorage`
+- Rotas protegidas usam `PrivateRoute` para garantir acesso autenticado
+- Axios inclui token no header `Authorization` para chamadas à API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ✅ Scripts úteis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start      # Inicia o frontend em modo desenvolvimento
+npm run build  # Cria build otimizada para produção
+npm test       # Executa testes (se implementados)
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧪 Testando a aplicação
 
-### Making a Progressive Web App
+1. Acesse `/register` para criar um usuário
+2. Faça login em `/login` para obter o token
+3. Navegue para `/dashboard` para ver informações do perfil (rota protegida)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📌 Observações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- O frontend está configurado para acessar backend na URL `http://localhost:3000`
+- Use Tailwind CSS para estilização responsiva e moderna
+- Utiliza React Context para gerenciamento simples e eficiente do estado de autenticação
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧾 Licença
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
