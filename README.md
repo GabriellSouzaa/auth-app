@@ -37,13 +37,10 @@ npm start
 
 ```
 src/
-├── api/                # Serviço Axios para autenticação
 ├── context/            # React Context para estado global de auth
-├── components/         # Componentes reutilizáveis (ex: PrivateRoute)
-├── pages/              # Páginas: Login, Register, Dashboard
-├── App.tsx             # Configuração de rotas
-├── index.tsx           # Ponto de entrada React
-├── index.css           # Estilos globais 
+├── routes/             # Configuração de rotas
+├── components/         # Páginas: Login, Register, Dashboard
+├── services/           # Serviços da aplicação
 ```
 
 ---
