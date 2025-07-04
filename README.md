@@ -43,7 +43,7 @@ src/
 ├── pages/              # Páginas: Login, Register, Dashboard
 ├── App.tsx             # Configuração de rotas
 ├── index.tsx           # Ponto de entrada React
-├── index.css           # Estilos globais (Tailwind)
+├── index.css           # Estilos globais 
 ```
 
 ---
